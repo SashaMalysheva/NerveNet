@@ -2,32 +2,16 @@
 It is the github repo for the paper: [NerveNet: Learning Structured Policy with Graph Neural Networks](http://www.cs.toronto.edu/~tingwuwang/nervenet.html).
 # Dependency
 
-## 1. tensorflow >= 1.0.1
-```bash
-pip install tensorflow-gpu
-```
-GPU version is not mandatory, since in the current repo, gpu is not used by default.
-## 2. gym >= 0.7.4
-### gym dependency
-```bash
-apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python-opengl libboost-all-dev libsdl2-dev swig
-```
-
-### gym installation via pip
-```bash
-pip install 'gym[mujoco]'
-```
-To use the mujoco, we actually need to use the mjkey.txt
-## 3. mujoco
-```bash
 pip install mujoco-py==0.5.7
-```
-Note that currently, we **only** support **MJPro 1.31**.
-Please install mujoco 1.31 from the [official website](http://www.mujoco.org/), and use the mujoco-py version **0.5.7**.
-## 4. Misc
-```bash
-pip six beautifulsoup4 termcolor num2words
-```
+pip install six beautifulsoup4 termcolor num2words
+pip install --user “gym[atari]“==0.9.1.
+pip install  gym==0.9.1.
+pip install tensorflow==1.4.0
+export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro131/bin”
+pip install scipy
+pip install bs4
+pip install lxml
+
 # Run the code
 To run the code, first cd into the 'tool' directory.
 We provide three examples below (The checkpoint files are already included in the repo):
