@@ -1,7 +1,7 @@
 # Introduction
 It is the github repo for the paper: [NerveNet: Learning Structured Policy with Graph Neural Networks](http://www.cs.toronto.edu/~tingwuwang/nervenet.html).
 # Dependency
-
+```
 pip install mujoco-py==0.5.7
 pip install six beautifulsoup4 termcolor num2words
 pip install --user “gym[atari]“==0.9.1.
@@ -11,7 +11,7 @@ export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro131/bin”
 pip install scipy
 pip install bs4
 pip install lxml
-
+```
 # Run the code
 To run the code, first cd into the 'tool' directory.
 We provide three examples below (The checkpoint files are already included in the repo):
