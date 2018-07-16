@@ -10,13 +10,13 @@ import numpy as np
 import tensorflow as tf
 import gym
 import time
-import init_path
+import tool.init_path as init_path
 import os
 from util import utils
 from util import ob_normalizer
 from util import logger
 from util import parallel_util
-from agent import base_agent
+from agent.agent import base_agent
 
 
 class rollout_agent(base_agent):

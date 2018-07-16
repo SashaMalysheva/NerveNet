@@ -5,10 +5,10 @@
 #   @author:
 #       Tingwu Wang, modified from kvfran and ppo repository.
 # -----------------------------------------------------------------------------
-import init_path
+import tool.init_path as init_path
 import tensorflow as tf
 from util import logger
-from policy_network import policy_network
+from network.policy_network import policy_network
 
 
 class tf_baseline_network(policy_network):

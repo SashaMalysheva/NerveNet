@@ -5,9 +5,9 @@
 # -----------------------------------------------------------------------------
 
 
-import init_path
+import tool.init_path as init_path
 from util import logger
-import mujoco_parser
+import graph_util.mujoco_parser as mujoco_parser
 import numpy as np
 
 
@@ -99,7 +99,7 @@ def map_input(transfer_env, i_value, added_constant, gnn_option_list):
     assert len(i_value) == ienv_info['debug_info']['ob_size']
 
     ienv_node_name_list = [node['name'] for node in ienv_info['tree']]
-    for output_id, output_node_id in oenv_info['input_dict'].iteritems():
+    for output_id, output_node_id in oenv_info['input_dict'].items():
         # get the name of the joint
         node_name = oenv_info['tree'][output_id]['name']
         # if the node is alreay in the input environment?
@@ -146,7 +146,7 @@ def map_transfer_env_running_mean(ienv, oenv, running_mean_info,
     }
     ienv_node_name_list = [node['name'] for node in ienv_info['tree']]
 
-    for node, oenv_digit in oenv_info['input_dict'].iteritems():
+    for node, oenv_digit in oenv_info['input_dict'].items():
         node_name = oenv_info['tree'][node]['name']
         # if the node is alreay in the input environment?
         if node_name in ienv_node_name_list:

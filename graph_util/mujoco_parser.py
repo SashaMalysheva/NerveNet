@@ -14,7 +14,7 @@
 # -----------------------------------------------------------------------------
 
 
-import init_path
+import tool.init_path as init_path
 import os
 import numpy as np
 from bs4 import BeautifulSoup as bs

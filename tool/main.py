@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 import gym
-import init_path
+import tool.init_path as init_path
 from agent import optimization_agent
 from agent import rollout_master_agent
 from config.config import get_config

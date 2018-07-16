@@ -9,7 +9,7 @@
 import numpy as np
 from gym import utils
 from gym.envs.mujoco import mujoco_env
-import init_path
+import tool.init_path as init_path
 import os
 import num2words
 

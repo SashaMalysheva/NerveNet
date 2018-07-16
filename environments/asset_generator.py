@@ -6,18 +6,18 @@
 # -----------------------------------------------------------------------------
 
 import argparse
-import init_path
+import tool.init_path as init_path
 import os
 import num2words
-import centipede_generator
-import snake_generator
-import reacher_generator
+import environments.centipede_generator as centipede_generator
+import environments.snake_generator as snake_generator
+import environments.reacher_generator as reacher_generator
 
 TASK_DICT = {
     'Centipede': [3, 5, 7] + [4, 6, 8, 10, 12, 14] + [20, 30, 40, 50],
     'CpCentipede': [3, 5, 7] + [4, 6, 8, 10, 12, 14],
     'Reacher': [0, 1, 2, 3, 4, 5, 6, 7],
-    'Snake': range(3, 10) + [10, 20, 40],
+    'Snake': list(range(3, 10)) + [10, 20, 40],
 }
 OUTPUT_BASE_DIR = os.path.join(init_path.get_abs_base_dir(),
                                'environments', 'assets')

@@ -5,10 +5,10 @@
 #       27th, Aug: MAJOR UPDATE: change the node input totally.
 #       NOTE: Now the input is in node order
 # ------------------------------------------------------------------------------
-import init_path
+import tool.init_path as init_path
 import tensorflow as tf
 import numpy as np
-from policy_network import policy_network
+from network.policy_network import policy_network
 from util import logger
 from graph_util import mujoco_parser
 from graph_util import gnn_util

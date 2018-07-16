@@ -8,7 +8,7 @@
 
 import numpy as np
 import tensorflow as tf
-import init_path
+import tool.init_path as init_path
 from util import utils
 from network.baseline_network import tf_baseline_network
 from network.gated_graph_baseline_network import tf_ggnn_baseline_network
@@ -17,7 +17,7 @@ from util import model_saver
 from util import parallel_util
 import os
 from util import summary_handler
-from agent import base_agent
+from agent.agent import base_agent
 from graph_util import graph_data_util
 
 
